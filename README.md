@@ -1,36 +1,20 @@
-# Rollup Starter Library
+# WebSocket Lab
 
-A simple starter library for creating TypeScript-based libraries using Rollup.
-
-## Features
-
-- TypeScript support
-- Generates CommonJS and ES Module builds
-- Source maps for easier debugging
-- Bundled using Rollup
-
-## Installation
-
-To use this starter library as a base for your project, you can simply clone the repository and start modifying the code.
-
-```bash
-git clone https://github.com/user/rollup-starter-lib.git
-cd rollup-starter-lib
-npm install
-```
-
-Replace https://github.com/user/rollup-starter-lib.git with the actual URL of your repository.
+WebSocket Lab is a straightforward tool for running a WebSocket server when you need to test WebSocket clients. Think of it like a [JSONPlaceholder](https://jsonplaceholder.typicode.com/) for WebSocket that you run locally.
 
 ## Usage
 
-Modify the src/main.ts file to add your library code, then build your library using the `build` script:
+Start the WebSocket server on port 8181 with this command:
 
 ```bash
-npm build
+npx websocket-lab
 ```
 
-This will generate CommonJS and ES Module builds in the dist folder.
+That's it! Your WebSocket server is up and running. Test your WebSocket clients hassle-free.
+
+> [!NOTE]
+> To use WebSocket Lab, you must have Node.js installed on your system. If you don't have Node.js installed, you can download and install it from https://nodejs.org/.
 
 ## License
 
-This project is licensed under the [MIT License](./LICENSE).
+WebSocket Lab is licensed under the MIT License. See the [LICENSE](LICENSE) for details.
