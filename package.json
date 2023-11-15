@@ -1,6 +1,6 @@
 {
   "name": "websocket-lab",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "bin": {
     "websocket-lab": "./dist/websocket-lab.js"
   },
