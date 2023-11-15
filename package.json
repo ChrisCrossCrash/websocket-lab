@@ -1,5 +1,5 @@
 {
-  "name": "rollup-starter-lib",
+  "name": "websocket-lab",
   "version": "0.0.1",
   "main": "dist/bundle.js",
   "module": "dist/bundle.esm.js",
