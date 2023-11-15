@@ -1,5 +1,3 @@
-// TODO: Make something
+#!/usr/bin/env node
 
-export default function () {
-  console.log('Hello from `rollup-starter-lib`')
-}
+console.log('websocket-lab is working!')

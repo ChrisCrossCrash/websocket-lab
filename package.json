@@ -1,21 +1,14 @@
 {
   "name": "websocket-lab",
   "version": "0.0.1",
-  "main": "dist/bundle.js",
-  "module": "dist/bundle.esm.js",
-  "typings": "dist/main.d.ts",
+  "bin": {
+    "websocket-lab": "./dist/websocket-lab.js"
+  },
   "author": "Chris Kumm <chrislkumm@protonmail.com> (https://www.chriskumm.com/)",
   "license": "MIT",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^25.0.7",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.5",
-    "@types/react": "^18.2.37",
-    "@types/react-dom": "^18.2.15",
     "prettier": "^3.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "rollup": "^4.4.1",
     "tslib": "^2.6.2",
     "typescript": "^5.2.2"
