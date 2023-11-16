@@ -7,17 +7,15 @@
   "author": "Chris Kumm <chrislkumm@protonmail.com> (https://www.chriskumm.com/)",
   "license": "MIT",
   "devDependencies": {
-    "@rollup/plugin-typescript": "^11.1.5",
     "@types/ws": "^8.5.9",
     "@types/yargs": "^17.0.31",
     "nodemon": "^3.0.1",
     "prettier": "^3.1.0",
-    "rollup": "^4.4.1",
     "tslib": "^2.6.2",
     "typescript": "^5.2.2"
   },
   "scripts": {
-    "build": "rollup -c",
+    "build": "tsc",
     "format": "prettier --write \"src/**/*\"",
     "start": "node dist/websocket-lab.js",
     "dev": "nodemon --watch src --ext ts --exec 'npm run build && npm start'"
