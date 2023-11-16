@@ -31,11 +31,11 @@ wss.on('connection', (ws: WebSocket) => {
   console.log('Client connected')
 
   // Handle incoming messages from the connected client.
-  ws.on('message', (message: string) => {
-    console.log(`Received message: ${message}`)
+  ws.on('message', (messageBuffer: Buffer) => {
+    const message = messageBuffer.toString()
 
-    // Send the received message back to the client.
-    ws.send(`Server says: ${message}`)
+    // Send back the received message to the client in reverse.
+    ws.send(message.split('').reverse().join(''))
   })
 
   // Event listener for when the WebSocket connection is closed.
