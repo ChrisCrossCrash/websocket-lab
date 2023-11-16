@@ -1,7 +1,21 @@
 #!/usr/bin/env node
 
+import yargs from 'yargs'
+import { hideBin } from 'yargs/helpers'
 import * as WebSocket from 'ws'
 import http from 'http'
+
+const argv = yargs(hideBin(process.argv))
+  .option('port', {
+    alias: 'p',
+    describe: 'Port to run the WebSocket server on',
+    type: 'number',
+    default: 8181,
+  })
+  .parseSync()
+
+// FIXME: Property 'port' does not exist on type...
+const PORT = argv.port
 
 // Create an HTTP server that will serve as the foundation for WebSocket communication.
 const server = http.createServer((req, res) => {
@@ -29,8 +43,6 @@ wss.on('connection', (ws: WebSocket) => {
     console.log('Client disconnected')
   })
 })
-
-const PORT = process.env.PORT || 8181
 
 // Start the HTTP server and listen for WebSocket connections on the specified port.
 server.listen(PORT, () => {

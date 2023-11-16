@@ -16,5 +16,5 @@ export default {
   ],
   // The external option tells Rollup which modules to exclude from the bundle.
   // https://rollupjs.org/configuration-options/#external
-  external: ['ws', 'http'],
+  external: ['ws', 'http', 'yargs', 'yargs/helpers'],
 }
