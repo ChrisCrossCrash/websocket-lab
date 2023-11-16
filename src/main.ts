@@ -5,6 +5,7 @@ import { hideBin } from 'yargs/helpers'
 import * as WebSocket from 'ws'
 import http from 'http'
 
+// Extract the port number from the command line arguments.
 const argv = yargs(hideBin(process.argv))
   .option('port', {
     alias: 'p',
@@ -14,7 +15,6 @@ const argv = yargs(hideBin(process.argv))
   })
   .parseSync()
 
-// FIXME: Property 'port' does not exist on type...
 const PORT = argv.port
 
 // Create an HTTP server that will serve as the foundation for WebSocket communication.
