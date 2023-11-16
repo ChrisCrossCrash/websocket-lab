@@ -14,4 +14,7 @@ export default {
     // https://github.com/rollup/plugins/tree/master/packages/typescript/#readme
     typescript(),
   ],
+  // The external option tells Rollup which modules to exclude from the bundle.
+  // https://rollupjs.org/configuration-options/#external
+  external: ['ws', 'http'],
 }
