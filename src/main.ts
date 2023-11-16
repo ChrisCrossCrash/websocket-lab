@@ -27,20 +27,29 @@ const server = http.createServer((req, res) => {
 const wss = new WebSocket.Server({ server })
 
 // Event listener for when a client establishes a WebSocket connection.
-wss.on('connection', (ws: WebSocket) => {
-  console.log('Client connected')
+wss.on('connection', (ws: WebSocket, req) => {
+  // Extract client IP and port from the request object
+  const clientIp = req.socket.remoteAddress
+  const clientPort = req.socket.remotePort
+
+  console.log(`[${clientIp}:${clientPort}] Client connected`)
 
   // Handle incoming messages from the connected client.
   ws.on('message', (messageBuffer: Buffer) => {
-    const message = messageBuffer.toString()
+    const receivedMessage = messageBuffer.toString()
+    console.log(
+      `[${clientIp}:${clientPort}] Received message: ${receivedMessage}`,
+    )
 
     // Send back the received message to the client in reverse.
-    ws.send(message.split('').reverse().join(''))
+    const sentMessage = receivedMessage.split('').reverse().join('')
+    ws.send(sentMessage)
+    console.log(`[${clientIp}:${clientPort}] Sent message: ${sentMessage}`)
   })
 
   // Event listener for when the WebSocket connection is closed.
   ws.on('close', () => {
-    console.log('Client disconnected')
+    console.log(`[${clientIp}:${clientPort}] Client disconnected`)
   })
 })
 
