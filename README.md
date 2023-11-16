@@ -22,7 +22,7 @@ That's it! Your WebSocket server is up and running. Test your WebSocket clients 
 
 Once the server is running, you can connect to it using any WebSocket client. Here's a simple example using JavaScript in a browser:
 
-1. Open your browser and navigate to `about:blank`.
+1. Open your browser and navigate to [`about:blank`](about:blank).
 2. Open the browser's developer console.
 3. Copy and paste the following JavaScript code into the console:
 
