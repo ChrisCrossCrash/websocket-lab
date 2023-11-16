@@ -10,6 +10,9 @@ Start the WebSocket server on port 8181 with this command:
 npx websocket-lab
 ```
 
+> [!TIP]
+> You can find more options, like how to run on a different port, by running `npx websocket-lab --help`.
+
 That's it! Your WebSocket server is up and running. Test your WebSocket clients hassle-free.
 
 > [!NOTE]
